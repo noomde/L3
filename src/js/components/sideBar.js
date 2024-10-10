@@ -1,6 +1,6 @@
 const template = document.createElement('template')
 template.innerHTML = `
-<link rel="stylesheet" href="../../css/app.css">
+<link rel="stylesheet" href="../../css/sideBar.css">
   <div class="sidebar">
     <ul>
     <li><a href="sum.js">Sum</a></li>
@@ -17,3 +17,14 @@ template.innerHTML = `
     </ul>
   </div>
 `
+
+class SideBar extends HTMLElement {
+
+  constructor() {
+    super()
+    this.attachShadow({ mode: 'open' })
+      .appendChild(template.content.cloneNode(true))
+  }
+}
+
+customElements.define('side-bar', SideBar)
