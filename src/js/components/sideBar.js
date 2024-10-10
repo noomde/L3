@@ -3,23 +3,17 @@ template.innerHTML = `
 <link rel="stylesheet" href="../../css/app.css">
   <div class="sidebar">
     <ul>
-    <li><a href="sum.js"></a></li>
-    <li><a href="sortDescending.js"></a></li>
-    <li><a href="sortAscending.js"></a></li>
-    <li><a href="mean.js"></a></li>
-    <li><a href="geometricMean.js"></a></li>
-    <li><a href="harmonicMean.js"></a></li>
-    <li><a href="median.js"></a></li>
-    <li><a href="convertDecimal.js"></a></li>
-    <li><a href="convertPercentage.js"></a></li>
-    <li><a href="range.js"></a></li>
-    <li><a href="populationVariance.js"></a></li>
-    <li><a href="sampleVariance.js"></a></li>
-    <li><a href="populationStandardDeviation.js"></a></li>
-    <li><a href="sampleStandardDeviation.js"></a></li>
-    <li><a href="mode.js"></a></li>
-    <li><a href="quartiles.js"></a></li>
-    <li><a href="interquartileRange.js"></a></li>
+    <li><a href="sum.js">Sum</a></li>
+    <li><a href="mean.js">Mean</a></li>
+    <li><a href="geometricMean.js">Geometric Mean</a></li>
+    <li><a href="harmonicMean.js">Harmonic Mean</a></li>
+    <li><a href="median.js"></a>Median</li>
+    <li><a href="range.js"></a>Range</li>
+    <li><a href="sampleVariance.js"></a>Sample Variance</li>
+    <li><a href="sampleStandardDeviation.js">Sample Standard Deviation</a></li>
+    <li><a href="mode.js">Mode</a></li>
+    <li><a href="quartiles.js"></a>Quartiles</li>
+    <li><a href="interquartileRange.js">Interquartile Range</a></li>
     </ul>
   </div>
 `
