@@ -1,31 +1,42 @@
 import { Statistics } from '../../../../Module/src/Statistics.js'
 import { CalculationGuide } from '../../../../Module/src/CalculationGuide.js'
+const template = document.createElement('template')
+template.innerHTML = `
+    <button class="button"></button>
+`
 
 export class StatisticalComponent extends HTMLElement {
   constructor() {
     super()
+    this.attachShadow({ moide: 'open' })
+      .appendChild(template.content.cloneNode(true))
+
     this.Statistics = new Statistics()
     this.CalculationGuide = new CalculationGuide()
   }
 
-  renderGuide() {
-    return
+  connectedCallback() {
+    this.dispatchStatisticsEvent()
   }
 
-  renderQuestion() {
-    return
+  getGuide() {
+    return { 'guide': `<p>No guide available.</p>` }
   }
 
-  renderDescription() {
-    return
+  getQuestion() {
+    return { 'question': `<p>No question available.</p>` }
   }
 
-  render() {
-    return `
-      <div class="guide">${this.renderGuide()}</div>
-      <div class="question">${this.renderQuestion()}</div>
-      <div class="description">${this.renderDescription()}</div>
-    `
+  getDescription() {
+    return { 'description': `<p>No description available.</p>` }
+  }
+
+  getAnswer() {
+    return { 'answer': `<p>No answer available.</p>`}
+  }
+
+  dispatchStatisticsEvent() {
+    
   }
 }
 

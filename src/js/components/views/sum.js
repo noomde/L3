@@ -17,3 +17,5 @@ class Sum extends StatisticalComponent {
     return
   }
 }
+
+customElements.define('sum-view', Sum)
