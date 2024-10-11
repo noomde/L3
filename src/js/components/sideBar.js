@@ -4,6 +4,16 @@ template.innerHTML = `
   <div class="sidebar">
     <ul>
       <sum-view></sum-view>
+      <mean-view></mean-view>
+      <geometricMean-view></geometricMean-view>
+      <harmonicMean-view></harmonicMean-view>
+      <median-view></median-view>
+      <variance-view></variance-view>
+      <standardDeviation-view></standardDeviation-view>
+      <range-view></range-view>
+      <quartiles-view></quartiles-view>
+      <mode-view></mode-view>
+      <interquartilesRange-view></interquartilesRange-view>
     </ul>
   </div>
 `
