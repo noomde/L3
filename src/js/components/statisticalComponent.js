@@ -19,7 +19,9 @@ export class StatisticalComponent extends HTMLElement {
   }
 
   connectedCallback() {
-    this.dispatchStatisticsEvent()
+    this.shadowRoot.querySelector('.button').addEventListener('click', () => {
+      this.dispatchStatisticsEvent()
+    })
   }
 
   getRandomArray() {
@@ -28,23 +30,31 @@ export class StatisticalComponent extends HTMLElement {
   }
 
   getGuide() {
-    return { 'guide': `<p>No guide available.</p>` }
+    return { 'guide': `No guide available.` }
   }
 
   getQuestion() {
-    return { 'question': `<p>No question available.</p>` }
+    return { 'question': `No question available.` }
   }
 
   getDefinition() {
-    return { 'definition': `<p>No description available.</p>` }
+    return { 'definition': `No description available.` }
   }
 
   getAnswer() {
-    return { 'answer': `<p>No answer available.</p>`}
+    return { 'answer': `No answer available.` }
   }
 
   dispatchStatisticsEvent() {
-    
+    this.dispatchEvent(new CustomEvent('statistics-event', {
+      detail: {
+        guide: this.getGuide(),
+        question: this.getQuestion(),
+        definition: this.getDefinition(),
+        answer: this.getAnswer()
+      },
+      bubbles: true
+    }))
   }
 }
 
