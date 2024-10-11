@@ -1,23 +1,26 @@
 import { StatisticalComponent } from '../statisticalComponent.js'
 
-class InterquartilesRange extends StatisticalComponent {
+class InterquartileRange extends StatisticalComponent {
   constructor() {
     super()
+    this.interquartileRangeGuide = this.CalculationGuide.interquartileRangeGuide()
   }
 
   getGuide() {
-    return { 'guide': `` }
+    return { 'guide': this.interquartileRangeGuide.steps }
   }
 
   getQuestion() {
-    return { 'question': `` }
+    return { 'question': `Find the interquartile range.` }
   }
 
-  getDescription() {
-    return { 'Description': `` }
+  getDefinition() {
+    return { 'definition': this.interquartileRangeGuide.definition }
   }
 
   getAnswer() {
     return this.Statistics.interquartilesRange(this.getRandomArray())
   }
 }
+
+customElements.define('interquartilesRange-view', InterquartileRange)

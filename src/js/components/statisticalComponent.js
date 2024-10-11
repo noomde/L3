@@ -35,8 +35,8 @@ export class StatisticalComponent extends HTMLElement {
     return { 'question': `<p>No question available.</p>` }
   }
 
-  getDescription() {
-    return { 'description': `<p>No description available.</p>` }
+  getDefinition() {
+    return { 'definition': `<p>No description available.</p>` }
   }
 
   getAnswer() {

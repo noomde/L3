@@ -3,18 +3,19 @@ import { StatisticalComponent } from '../statisticalComponent.js'
 class SampleVariance extends StatisticalComponent {
   constructor() {
     super()
+    this.varianceGuide = this.CalculationGuide.varianceGuide()
   }
 
   getGuide() {
-    return { 'guide': `<p>Add all numbers together</p>` }
+    return { 'guide': this.varianceGuide.steps }
   }
 
   getQuestion() {
-    return { 'question': `<p>Calculate the sum</p>` }
+    return { 'question': `Calculate the sample variance` }
   }
 
-  getDescription() {
-    return { 'Description': `<p>Get the total amount of the numbers</p>` }
+  getDefinition() {
+    return { 'definition': this.varianceGuide.definition }
   }
 
   getAnswer() {

@@ -3,21 +3,24 @@ import { StatisticalComponent } from '../statisticalComponent.js'
 class Mean extends StatisticalComponent {
   constructor() {
     super()
+    this.meanGuide = this.CalculationGuide.meanGuide()
   }
 
   getGuide() {
-    return { 'guide': `` }
+    return { 'guide': this.meanGuide.steps }
   }
 
   getQuestion() {
-    return { 'question': `` }
+    return { 'question': `Calculate the mean.` }
   }
 
-  getDescription() {
-    return { 'Description': `` }
+  getDefinition() {
+    return { 'definition': this.meanGuide.definition }
   }
 
   getAnswer() {
     return this.Statistics.mean(this.getRandomArray())
   }
 }
+
+customElements.define('mean-view', Mean)

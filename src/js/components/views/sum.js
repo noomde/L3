@@ -13,8 +13,8 @@ class Sum extends StatisticalComponent {
     return { 'question': `<p>Calculate the sum</p>` }
   }
 
-  getDescription() {
-    return { 'Description': `<p>Get the total amount of the numbers</p>` }
+  getDefinition() {
+    return { 'definition': `<p>Get the total amount of the numbers</p>` }
   }
 
   getAnswer() {

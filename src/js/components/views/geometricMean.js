@@ -3,21 +3,24 @@ import { StatisticalComponent } from '../statisticalComponent.js'
 class GeometricMean extends StatisticalComponent {
   constructor() {
     super()
+    this.geometricMeanGuide = this.CalculationGuide.geometricMeanGuide()
   }
 
   getGuide() {
-    return { 'guide': `` }
+    return { 'guide': this.geometricMeanGuide.steps }
   }
 
   getQuestion() {
-    return { 'question': `` }
+    return { 'question': `Calculate the geometric mean.` }
   }
 
-  getDescription() {
-    return { 'Description': `` }
+  getDefinition() {
+    return { 'definition': this.geometricMeanGuide.definition }
   }
 
   getAnswer() {
     return this.Statistics.geometricMean(this.getRandomArray())
   }
 }
+
+customElements.define('geometricMean-view', GeometricMean)
