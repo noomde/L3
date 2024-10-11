@@ -1,5 +1,7 @@
 import { Statistics } from '../../../../Module/src/Statistics.js'
 import { CalculationGuide } from '../../../../Module/src/CalculationGuide.js'
+import { numArrays } from '../staticData/dataArrays.js'
+
 const template = document.createElement('template')
 template.innerHTML = `
     <button class="button"></button>
@@ -13,10 +15,16 @@ export class StatisticalComponent extends HTMLElement {
 
     this.Statistics = new Statistics()
     this.CalculationGuide = new CalculationGuide()
+    this.numArrays = numArrays
   }
 
   connectedCallback() {
     this.dispatchStatisticsEvent()
+  }
+
+  getRandomArray() {
+    const randomIndex = Math.floor(Math.random() * numArrays.length)
+    return numArrays[randomIndex]
   }
 
   getGuide() {

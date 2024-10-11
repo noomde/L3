@@ -5,16 +5,20 @@ class Sum extends StatisticalComponent {
     super()
   }
 
-  renderGuide() {
-    return
+  getGuide() {
+    return { 'guide': `<p>Add all numbers together</p>` }
   }
 
-  renderQuestion() {
-    return
+  getQuestion() {
+    return { 'question': `<p>Calculate the sum</p>` }
   }
 
-  renderDescription() {
-    return
+  getDescription() {
+    return { 'Description': `<p>Get the total amount of the numbers</p>` }
+  }
+
+  getAnswer() {
+    return this.Statistics.sum(this.getRandomArray())
   }
 }
 
