@@ -4,6 +4,7 @@ class Quartiles extends StatisticalComponent {
   constructor() {
     super()
     this.quartilesGuide = this.CalculationGuide.quartilesGuide()
+    this.buttonName = 'Quartiles'
   }
 
   getGuide() {

@@ -4,6 +4,7 @@ class GeometricMean extends StatisticalComponent {
   constructor() {
     super()
     this.geometricMeanGuide = this.CalculationGuide.geometricMeanGuide()
+    this.buttonName = 'Geometric Mean'
   }
 
   getGuide() {

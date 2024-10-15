@@ -4,6 +4,7 @@ class Median extends StatisticalComponent {
   constructor() {
     super()
     this.medianGuide = this.CalculationGuide.medianGuide()
+    this.buttonName = 'Median'
   }
 
   getGuide() {

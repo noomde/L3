@@ -4,6 +4,7 @@ class Mode extends StatisticalComponent {
   constructor() {
     super()
     this.modeGuide = this.CalculationGuide.modeGuide()
+    this.buttonName = 'Mode'
   }
 
   getGuide() {

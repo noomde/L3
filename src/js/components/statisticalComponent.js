@@ -10,7 +10,7 @@ template.innerHTML = `
 export class StatisticalComponent extends HTMLElement {
   constructor() {
     super()
-    this.attachShadow({ moide: 'open' })
+    this.attachShadow({ mode: 'open' })
       .appendChild(template.content.cloneNode(true))
 
     this.Statistics = new Statistics()
@@ -19,6 +19,8 @@ export class StatisticalComponent extends HTMLElement {
   }
 
   connectedCallback() {
+    const button = this.shadowRoot.querySelector('.button')
+    button.textContent = this.buttonName
     this.shadowRoot.querySelector('.button').addEventListener('click', () => {
       this.dispatchStatisticsEvent()
     })

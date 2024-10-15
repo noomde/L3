@@ -4,6 +4,7 @@ class Range extends StatisticalComponent {
   constructor() {
     super()
     this.rangeGuide = this.CalculationGuide.rangeGuide()
+    this.buttonName = 'Range'
   }
 
   getGuide() {

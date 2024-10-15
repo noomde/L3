@@ -4,6 +4,7 @@ class SampleVariance extends StatisticalComponent {
   constructor() {
     super()
     this.varianceGuide = this.CalculationGuide.varianceGuide()
+    this.buttonName = 'Variance'
   }
 
   getGuide() {

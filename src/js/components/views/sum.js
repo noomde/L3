@@ -3,6 +3,7 @@ import { StatisticalComponent } from '../statisticalComponent.js'
 class Sum extends StatisticalComponent {
   constructor() {
     super()
+    this.buttonName = 'Sum'
   }
 
   getGuide() {

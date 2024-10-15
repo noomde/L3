@@ -4,6 +4,7 @@ class SampleStandardDeviation extends StatisticalComponent {
   constructor() {
     super()
     this.standardDeviationGuide = this.CalculationGuide.standardDeviationGuide()
+    this.buttonName = 'Standard Deviation'
   }
 
   getGuide() {

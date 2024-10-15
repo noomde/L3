@@ -4,6 +4,7 @@ class InterquartileRange extends StatisticalComponent {
   constructor() {
     super()
     this.interquartileRangeGuide = this.CalculationGuide.interquartileRangeGuide()
+    this.buttonName = 'Interquartile Range'
   }
 
   getGuide() {

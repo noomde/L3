@@ -4,6 +4,7 @@ class Mean extends StatisticalComponent {
   constructor() {
     super()
     this.meanGuide = this.CalculationGuide.meanGuide()
+    this.buttonName = 'Mean'
   }
 
   getGuide() {
