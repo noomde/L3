@@ -4,6 +4,7 @@ import { numArrays } from '../staticData/dataArrays.js'
 
 const template = document.createElement('template')
 template.innerHTML = `
+<link rel="stylesheet" href="../../css/sideButtons.css">
     <button class="button"></button>
 `
 
