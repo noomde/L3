@@ -22,6 +22,7 @@ class renderStatistics extends HTMLElement {
     this.renderQuestion(e.detail.question)
     this.renderDefintion(e.detail.definition)
     this.renderGuide(e.detail.guide)
+    this.answer(e.detail.answer)
    })
   }
 
@@ -35,6 +36,10 @@ class renderStatistics extends HTMLElement {
 
   renderGuide(event) {
     this.shadowRoot.querySelector('.guide').textContent = event.data
+  }
+
+  answer(event) {
+    
   }
 }
 
