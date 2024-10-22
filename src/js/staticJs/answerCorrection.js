@@ -1,6 +1,6 @@
 export class answerCorrection {
   isCorrectAnswer(answer, correctAnswer) {
-    if (parseInt(answer) === parseInt(correctAnswer)) { // add correct decimal length
+    if (parseFloat(answer).toFixed(1) === parseFloat(correctAnswer).toFixed(1)) {
       return true
     }
     return false
