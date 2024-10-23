@@ -48,13 +48,18 @@ export class StatisticalComponent extends HTMLElement {
     return { 'answer': `No answer available.` }
   }
 
+  getNumberArray() {
+    return { 'numbers': `No numbers to use.` }
+  }
+
   dispatchStatisticsEvent() {
     this.dispatchEvent(new CustomEvent('statistics-event', {
       detail: {
         guide: this.getGuide(),
         question: this.getQuestion(),
         definition: this.getDefinition(),
-        answer: this.getAnswer()
+        answer: this.getAnswer(),
+        numbers: this.getNumberArray()
       },
       bubbles: true
     }))

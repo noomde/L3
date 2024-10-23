@@ -5,6 +5,7 @@ class GeometricMean extends StatisticalComponent {
     super()
     this.geometricMeanGuide = this.CalculationGuide.geometricMeanGuide()
     this.buttonName = 'Geometric Mean'
+    this.numbersArray = this.getRandomArray()
   }
 
   getGuide() {
@@ -21,6 +22,10 @@ class GeometricMean extends StatisticalComponent {
 
   getAnswer() {
     return this.Statistics.geometricMean(this.getRandomArray())
+  }
+
+  getNumberArray() {
+    return this.numbersArray
   }
 }
 

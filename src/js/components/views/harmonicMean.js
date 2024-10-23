@@ -5,6 +5,7 @@ class HarmonicMean extends StatisticalComponent {
     super()
     this.harmonicMeanGuide = this.CalculationGuide.harmonicMeanGuide()
     this.buttonName = 'Harmonic Mean'
+    this.numbersArray = this.getRandomArray()
   }
 
   getGuide() {
@@ -21,6 +22,10 @@ class HarmonicMean extends StatisticalComponent {
 
   getAnswer() {
     return this.Statistics.harmonicMean(this.getRandomArray())
+  }
+
+  getNumberArray() {
+    return this.numbersArray
   }
 }
 

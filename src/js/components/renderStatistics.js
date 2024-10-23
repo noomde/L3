@@ -1,8 +1,11 @@
+import { AnswerCorrection } from '../staticJs/answerCorrection.js'
+
 const template = document.createElement('template')
 template.innerHTML = `
 <link rel="stylesheet" href="../../css/renderStatistics.css">
   <div class="MainPage">
     <p class="question"></p>
+    <p class="numbers"></p>
     <p class="definition"></p>
     <input type="text" class="answer">
     <div class="guide"></div>
@@ -15,6 +18,7 @@ class renderStatistics extends HTMLElement {
     super()
     this.attachShadow({ mode: 'open' })
       .appendChild(template.content.cloneNode(true))
+    this.correctAnswer = null
   }
 
   connectedCallback() {
@@ -22,7 +26,14 @@ class renderStatistics extends HTMLElement {
     this.renderQuestion(e.detail.question)
     this.renderDefintion(e.detail.definition)
     this.renderGuide(e.detail.guide)
-    this.answer(e.detail.answer)
+    this.renderNumbers(e.detail.numbers)
+    this.correctAnswer = e.detail.answer.data
+   })
+
+   this.shadowRoot.querySelector('.answer').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      this.answer(this.correctAnswer)
+    }
    })
   }
 
@@ -38,8 +49,15 @@ class renderStatistics extends HTMLElement {
     this.shadowRoot.querySelector('.guide').textContent = event.data
   }
 
-  answer(event) {
-    
+  renderNumbers(event) {
+    this.shadowRoot.querySelector('.numbers').textContent = event.data
+  }
+
+  answer(correctAnswer) {
+    const guessedAnswer = this.shadowRoot.querySelector('.answer').value
+    if (AnswerCorrection.isCorrectAnswer(guessedAnswer, correctAnswer)) {
+      this.dispatchEvent(new Event('add-points'))
+    }
   }
 }
 

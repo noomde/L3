@@ -4,6 +4,7 @@ class Sum extends StatisticalComponent {
   constructor() {
     super()
     this.buttonName = 'Sum'
+    this.numbersArray = this.getRandomArray()
   }
 
   getGuide() {
@@ -19,7 +20,11 @@ class Sum extends StatisticalComponent {
   }
 
   getAnswer() {
-    return this.Statistics.sum(this.getRandomArray())
+    return this.Statistics.sum(this.numbersArray)
+  }
+
+  getNumberArray() {
+    return this.numbersArray
   }
 }
 

@@ -5,6 +5,7 @@ class SampleVariance extends StatisticalComponent {
     super()
     this.varianceGuide = this.CalculationGuide.varianceGuide()
     this.buttonName = 'Variance'
+    this.numbersArray = this.getRandomArray()
   }
 
   getGuide() {
@@ -21,6 +22,10 @@ class SampleVariance extends StatisticalComponent {
 
   getAnswer() {
     return this.Statistics.sampleVariance(this.getRandomArray())
+  }
+
+  getNumberArray() {
+    return this.numbersArray
   }
 }
 

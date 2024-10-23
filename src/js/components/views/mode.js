@@ -5,6 +5,7 @@ class Mode extends StatisticalComponent {
     super()
     this.modeGuide = this.CalculationGuide.modeGuide()
     this.buttonName = 'Mode'
+    this.numbersArray = this.getRandomArray()
   }
 
   getGuide() {
@@ -21,6 +22,10 @@ class Mode extends StatisticalComponent {
 
   getAnswer() {
     return this.Statistics.mode(this.getRandomArray())
+  }
+
+  getNumberArray() {
+    return this.numbersArray
   }
 }
 

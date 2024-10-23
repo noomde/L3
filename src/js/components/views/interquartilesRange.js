@@ -5,6 +5,7 @@ class InterquartileRange extends StatisticalComponent {
     super()
     this.interquartileRangeGuide = this.CalculationGuide.interquartileRangeGuide()
     this.buttonName = 'Interquartile Range'
+    this.numbersArray = this.getRandomArray()
   }
 
   getGuide() {
@@ -21,6 +22,10 @@ class InterquartileRange extends StatisticalComponent {
 
   getAnswer() {
     return this.Statistics.interquartilesRange(this.getRandomArray())
+  }
+
+  getNumberArray() {
+    return this.numbersArray
   }
 }
 

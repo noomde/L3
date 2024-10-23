@@ -5,6 +5,7 @@ class Mean extends StatisticalComponent {
     super()
     this.meanGuide = this.CalculationGuide.meanGuide()
     this.buttonName = 'Mean'
+    this.numbersArray = this.getRandomArray()
   }
 
   getGuide() {
@@ -21,6 +22,10 @@ class Mean extends StatisticalComponent {
 
   getAnswer() {
     return this.Statistics.mean(this.getRandomArray())
+  }
+
+  getNumberArray() {
+    return this.numbersArray
   }
 }
 

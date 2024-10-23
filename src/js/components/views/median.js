@@ -5,6 +5,7 @@ class Median extends StatisticalComponent {
     super()
     this.medianGuide = this.CalculationGuide.medianGuide()
     this.buttonName = 'Median'
+    this.numbersArray = this.getRandomArray()
   }
 
   getGuide() {
@@ -21,6 +22,10 @@ class Median extends StatisticalComponent {
 
   getAnswer() {
     return this.Statistics.median(this.getRandomArray())
+  }
+
+  getNumberArray() {
+    return this.numbersArray
   }
 }
 

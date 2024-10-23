@@ -5,6 +5,7 @@ class SampleStandardDeviation extends StatisticalComponent {
     super()
     this.standardDeviationGuide = this.CalculationGuide.standardDeviationGuide()
     this.buttonName = 'Standard Deviation'
+    this.numbersArray = this.getRandomArray()
   }
 
   getGuide() {
@@ -21,6 +22,10 @@ class SampleStandardDeviation extends StatisticalComponent {
 
   getAnswer() {
     return this.Statistics.sampleStandardDeviation(this.getRandomArray())
+  }
+
+  getNumberArray() {
+    return this.numbersArray
   }
 }
 

@@ -5,6 +5,7 @@ class Range extends StatisticalComponent {
     super()
     this.rangeGuide = this.CalculationGuide.rangeGuide()
     this.buttonName = 'Range'
+    this.numbersArray = this.getRandomArray()
   }
 
   getGuide() {
@@ -21,6 +22,10 @@ class Range extends StatisticalComponent {
 
   getAnswer() {
     return this.Statistics.range(this.getRandomArray())
+  }
+
+  getNumberArray() {
+    return this.numbersArray
   }
 }
 
