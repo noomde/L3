@@ -47,11 +47,20 @@ class renderStatistics extends HTMLElement {
   }
 
   renderGuide(event) {
-    this.shadowRoot.querySelector('.guide').innerHTML = event
+    const guideElement = this.shadowRoot.querySelector('.guide')
+    guideElement.innerHTML = ''
+
+    if (Array.isArray(event)) {
+      for (let i = 0; i < event.length; i++) {
+        const pElement = document.createElement('p')
+        pElement.textContent = event[i]
+        guideElement.append(pElement)
+      }
+    }
   }
 
   renderNumbers(event) {
-    this.shadowRoot.querySelector('.numbers').innerHTML = event.join(',')
+    this.shadowRoot.querySelector('.numbers').innerHTML = event.join(', ')
   }
 
   checkAnswer(correctAnswer) {
@@ -65,7 +74,7 @@ class renderStatistics extends HTMLElement {
   }
 
   renderResponse(isCorrect) {
-    const responseElement = this.shadowRoot.querySelector('.response').value
+    const responseElement = this.shadowRoot.querySelector('.response')
     if (isCorrect) {
       responseElement.textContent = 'Correct Answer'
     } else {
