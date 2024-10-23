@@ -9,19 +9,19 @@ class SampleVariance extends StatisticalComponent {
   }
 
   getGuide() {
-    return { 'guide': this.varianceGuide.steps }
+    return this.varianceGuide.steps
   }
 
   getQuestion() {
-    return { 'question': `Calculate the sample variance` }
+    return `Calculate the sample variance`
   }
 
   getDefinition() {
-    return { 'definition': this.varianceGuide.definition }
+    return this.varianceGuide.definition
   }
 
   getAnswer() {
-    return this.Statistics.sampleVariance(this.getRandomArray())
+    return this.Statistics.sampleVariance(this.numbersArray)
   }
 
   getNumberArray() {

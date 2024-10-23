@@ -9,19 +9,19 @@ class HarmonicMean extends StatisticalComponent {
   }
 
   getGuide() {
-    return { 'guide': this.harmonicMeanGuide.steps }
+    return this.harmonicMeanGuide.steps
   }
 
   getQuestion() {
-    return { 'question': `Calculate the hamonic mean.` }
+    return `Calculate the hamonic mean.`
   }
 
   getDefinition() {
-    return { 'definition': this.harmonicMeanGuide.definition }
+    return this.harmonicMeanGuide.definition
   }
 
   getAnswer() {
-    return this.Statistics.harmonicMean(this.getRandomArray())
+    return this.Statistics.harmonicMean(this.numbersArray)
   }
 
   getNumberArray() {
@@ -29,4 +29,4 @@ class HarmonicMean extends StatisticalComponent {
   }
 }
 
-customElements.define('harmoinicMean', HarmonicMean)
+customElements.define('harmoinicmean-view', HarmonicMean)

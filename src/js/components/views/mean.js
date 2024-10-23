@@ -9,19 +9,19 @@ class Mean extends StatisticalComponent {
   }
 
   getGuide() {
-    return { 'guide': this.meanGuide.steps }
+    return this.meanGuide.steps
   }
 
   getQuestion() {
-    return { 'question': `Calculate the mean.` }
+    return `Calculate the mean.`
   }
 
   getDefinition() {
-    return { 'definition': this.meanGuide.definition }
+    return this.meanGuide.definition
   }
 
   getAnswer() {
-    return this.Statistics.mean(this.getRandomArray())
+    return this.Statistics.mean(this.numbersArray)
   }
 
   getNumberArray() {

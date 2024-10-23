@@ -9,19 +9,19 @@ class GeometricMean extends StatisticalComponent {
   }
 
   getGuide() {
-    return { 'guide': this.geometricMeanGuide.steps }
+    return this.geometricMeanGuide.steps 
   }
 
   getQuestion() {
-    return { 'question': `Calculate the geometric mean.` }
+    return `Calculate the geometric mean.`
   }
 
   getDefinition() {
-    return { 'definition': this.geometricMeanGuide.definition }
+    return this.geometricMeanGuide.definition
   }
 
   getAnswer() {
-    return this.Statistics.geometricMean(this.getRandomArray())
+    return this.Statistics.geometricMean(this.numbersArray)
   }
 
   getNumberArray() {
@@ -29,4 +29,4 @@ class GeometricMean extends StatisticalComponent {
   }
 }
 
-customElements.define('geometricMean-view', GeometricMean)
+customElements.define('geometricmean-view', GeometricMean)

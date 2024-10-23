@@ -53,7 +53,7 @@ export class StatisticalComponent extends HTMLElement {
   }
 
   dispatchStatisticsEvent() {
-    this.dispatchEvent(new CustomEvent('statistics-event', {
+    window.dispatchEvent(new CustomEvent('statistics-event', {
       detail: {
         guide: this.getGuide(),
         question: this.getQuestion(),
@@ -61,8 +61,8 @@ export class StatisticalComponent extends HTMLElement {
         answer: this.getAnswer(),
         numbers: this.getNumberArray()
       },
-      bubbles: true
     }))
   }
 }
 
+customElements.define('statistical-component', StatisticalComponent)

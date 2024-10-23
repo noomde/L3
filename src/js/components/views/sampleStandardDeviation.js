@@ -9,19 +9,19 @@ class SampleStandardDeviation extends StatisticalComponent {
   }
 
   getGuide() {
-    return { 'guide': this.standardDeviationGuide.steps }
+    return this.standardDeviationGuide.steps
   }
 
   getQuestion() {
-    return { 'question': `Calculate the standard deviation.` }
+    return `Calculate the standard deviation.`
   }
 
   getDefinition() {
-    return { 'definition': this.standardDeviationGuide.definition }
+    return this.standardDeviationGuide.definition
   }
 
   getAnswer() {
-    return this.Statistics.sampleStandardDeviation(this.getRandomArray())
+    return this.Statistics.sampleStandardDeviation(this.numbersArray)
   }
 
   getNumberArray() {
@@ -29,4 +29,4 @@ class SampleStandardDeviation extends StatisticalComponent {
   }
 }
 
-customElements.define('standardDeviation-view', SampleStandardDeviation)
+customElements.define('standarddeviation-view', SampleStandardDeviation)

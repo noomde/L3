@@ -9,19 +9,19 @@ class Mode extends StatisticalComponent {
   }
 
   getGuide() {
-    return { 'guide': this.modeGuide.steps }
+    return this.modeGuide.steps
   }
 
   getQuestion() {
-    return { 'question': `Find the first mode from left to right.` }
+    return `Find the first mode from left to right.`
   }
 
   getDefinition() {
-    return { 'definition': this.modeGuide.definition }
+    return this.modeGuide.definition
   }
 
   getAnswer() {
-    return this.Statistics.mode(this.getRandomArray())
+    return this.Statistics.mode(this.numbersArray)
   }
 
   getNumberArray() {

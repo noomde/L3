@@ -9,19 +9,19 @@ class Range extends StatisticalComponent {
   }
 
   getGuide() {
-    return { 'guide': this.rangeGuide.steps }
+    return this.rangeGuide.steps
   }
 
   getQuestion() {
-    return { 'question': `Calculate the range.` }
+    return `Calculate the range.`
   }
 
   getDefinition() {
-    return { 'definition': this.rangeGuide.definition }
+    return this.rangeGuide.definition
   }
 
   getAnswer() {
-    return this.Statistics.range(this.getRandomArray())
+    return this.Statistics.range(this.numbersArray)
   }
 
   getNumberArray() {

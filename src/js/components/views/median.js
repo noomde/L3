@@ -9,19 +9,19 @@ class Median extends StatisticalComponent {
   }
 
   getGuide() {
-    return { 'guide': this.medianGuide.steps }
+    return this.medianGuide.steps
   }
 
   getQuestion() {
-    return { 'question': `Calculate the median.` }
+    return `Calculate the median.`
   }
 
   getDefinition() {
-    return { 'definition': this.medianGuide.definition }
+    return this.medianGuide.definition
   }
 
   getAnswer() {
-    return this.Statistics.median(this.getRandomArray())
+    return this.Statistics.median(this.numbersArray)
   }
 
   getNumberArray() {

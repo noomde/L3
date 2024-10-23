@@ -5,15 +5,14 @@ template.innerHTML = `
     <ul>
       <sum-view></sum-view>
       <mean-view></mean-view>
-      <geometricMean-view></geometricMean-view>
-      <harmonicMean-view></harmonicMean-view>
+      <geometricmean-view></geometricmean-view>
+      <harmonicmean-view></harmonicmean-view>
       <median-view></median-view>
       <variance-view></variance-view>
-      <standardDeviation-view></standardDeviation-view>
+      <standarddeviation-view></standarddeviation-view>
       <range-view></range-view>
-      <quartiles-view></quartiles-view>
       <mode-view></mode-view>
-      <interquartilesRange-view></interquartilesRange-view>
+      <interquartilesrange-view></interquartilesrange-view>
     </ul>
   </div>
 `

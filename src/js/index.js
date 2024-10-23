@@ -1,0 +1,20 @@
+import './components/views/geometricMean.js'
+import './components/views/harmonicMean.js'
+import './components/views/interquartilesRange.js'
+import './components/views/mean.js'
+import './components/views/median.js'
+import './components/views/mode.js'
+import './components/views/range.js'
+import './components/views/sampleStandardDeviation.js'
+import './components/views/sampleVariance.js'
+import './components/views/sum.js'
+
+import './components/pointSystem.js'
+import './components/renderStatistics.js'
+import './components/sideBar.js'
+import './components/statisticalComponent.js'
+
+import './staticData/dataArrays.js'
+import './staticJs/answerCorrection.js'
+
+import './components/app.js'

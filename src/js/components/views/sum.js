@@ -8,15 +8,15 @@ class Sum extends StatisticalComponent {
   }
 
   getGuide() {
-    return { 'guide': `Add all numbers together` }
+    return `Add all numbers together`
   }
 
   getQuestion() {
-    return { 'question': `Calculate the sum` }
+    return `Calculate the sum`
   }
 
   getDefinition() {
-    return { 'definition': `Get the total amount of the numbers` }
+    return `Get the total amount of the numbers`
   }
 
   getAnswer() {

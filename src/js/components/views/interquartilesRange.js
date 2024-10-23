@@ -9,19 +9,19 @@ class InterquartileRange extends StatisticalComponent {
   }
 
   getGuide() {
-    return { 'guide': this.interquartileRangeGuide.steps }
+    return this.interquartileRangeGuide.steps
   }
 
   getQuestion() {
-    return { 'question': `Find the interquartile range.` }
+    return `Find the interquartile range.`
   }
 
   getDefinition() {
-    return { 'definition': this.interquartileRangeGuide.definition }
+    return this.interquartileRangeGuide.definition
   }
 
   getAnswer() {
-    return this.Statistics.interquartilesRange(this.getRandomArray())
+    return this.Statistics.interquartileRange(this.numbersArray)
   }
 
   getNumberArray() {
@@ -29,4 +29,4 @@ class InterquartileRange extends StatisticalComponent {
   }
 }
 
-customElements.define('interquartilesRange-view', InterquartileRange)
+customElements.define('interquartilesrange-view', InterquartileRange)

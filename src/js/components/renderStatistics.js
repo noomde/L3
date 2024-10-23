@@ -28,30 +28,30 @@ class renderStatistics extends HTMLElement {
       this.renderDefintion(e.detail.definition)
       this.renderGuide(e.detail.guide)
       this.renderNumbers(e.detail.numbers)
-      this.correctAnswer = e.detail.answer.data
+      this.correctAnswer = e.detail.answer
     })
 
     this.shadowRoot.querySelector('.answer').addEventListener('keydown', (e) => {
       if (e.key === 'Enter') {
-        this.answer(this.correctAnswer)
+        this.checkAnswer(this.correctAnswer)
       }
     })
   }
 
   renderQuestion(event) {
-    this.shadowRoot.querySelector('.question').textContent = event.data
+    this.shadowRoot.querySelector('.question').innerHTML = event
   }
 
   renderDefintion(event) {
-    this.shadowRoot.querySelector('.definition').textContent = event.data
+    this.shadowRoot.querySelector('.definition').innerHTML = event
   }
 
   renderGuide(event) {
-    this.shadowRoot.querySelector('.guide').textContent = event.data
+    this.shadowRoot.querySelector('.guide').innerHTML = event
   }
 
   renderNumbers(event) {
-    this.shadowRoot.querySelector('.numbers').textContent = event.data
+    this.shadowRoot.querySelector('.numbers').innerHTML = event.join(',')
   }
 
   checkAnswer(correctAnswer) {
