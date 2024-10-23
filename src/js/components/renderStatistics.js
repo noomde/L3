@@ -8,6 +8,7 @@ template.innerHTML = `
     <p class="numbers"></p>
     <p class="definition"></p>
     <input type="text" class="answer">
+    <p class="response"></p>
     <div class="guide"></div>
     <point-system></point-system>
   </div>
@@ -22,19 +23,19 @@ class renderStatistics extends HTMLElement {
   }
 
   connectedCallback() {
-   window.addEventListener('statistics-event', (e) => {
-    this.renderQuestion(e.detail.question)
-    this.renderDefintion(e.detail.definition)
-    this.renderGuide(e.detail.guide)
-    this.renderNumbers(e.detail.numbers)
-    this.correctAnswer = e.detail.answer.data
-   })
+    window.addEventListener('statistics-event', (e) => {
+      this.renderQuestion(e.detail.question)
+      this.renderDefintion(e.detail.definition)
+      this.renderGuide(e.detail.guide)
+      this.renderNumbers(e.detail.numbers)
+      this.correctAnswer = e.detail.answer.data
+    })
 
-   this.shadowRoot.querySelector('.answer').addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') {
-      this.answer(this.correctAnswer)
-    }
-   })
+    this.shadowRoot.querySelector('.answer').addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        this.answer(this.correctAnswer)
+      }
+    })
   }
 
   renderQuestion(event) {
@@ -53,12 +54,24 @@ class renderStatistics extends HTMLElement {
     this.shadowRoot.querySelector('.numbers').textContent = event.data
   }
 
-  answer(correctAnswer) {
+  checkAnswer(correctAnswer) {
     const guessedAnswer = this.shadowRoot.querySelector('.answer').value
-    if (AnswerCorrection.isCorrectAnswer(guessedAnswer, correctAnswer)) {
-      this.dispatchEvent(new Event('add-points'))
+    const isCorrect = AnswerCorrection.isCorrectAnswer(guessedAnswer, correctAnswer)
+
+    this.renderResponse(isCorrect)
+    if (isCorrect) {
+      window.dispatchEvent(new Event('add-points'))
+    }
+  }
+
+  renderResponse(isCorrect) {
+    const responseElement = this.shadowRoot.querySelector('.response').value
+    if (isCorrect) {
+      responseElement.textContent = 'Correct Answer'
+    } else {
+      responseElement.textContent = 'Wrong Answer, try again'
     }
   }
 }
 
-customElements.define('render-statistics',renderStatistics)
+customElements.define('render-statistics', renderStatistics)
