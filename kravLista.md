@@ -2,10 +2,10 @@
 
 ## Functional Requirements
 
-### 1. Som en användare ska man kunna göra simpla statistiska ekvationer
-### 2. Som en användare ska man kunna göra avancerade statistiska ekvationer
-### 3. Som en användare ska man kunna få hjälp att räkna ut simpla statistiska ekvationer
-### 4. Som en användare ska man kunna få hjälp att räkna ut avancerade statistiska ekvationer
+### 1. Som en användare ska man kunna göra simpla statistiska ekvationer t.ex (sum, mean)
+### 2. Som en användare ska man kunna göra avancerade statistiska ekvationer t.ex (standard deviation, variation)
+### 3. Som en användare ska man kunna få hjälp att räkna ut simpla statistiska ekvationer t.ex (sum, mean)
+### 4. Som en användare ska man kunna få hjälp att räkna ut avancerade statistiska ekvationer t.ex (standard deviation, variation)
 ### 5. Som en användare ska man kunna svara på simpla statistiska ekvationer
 ### 6. Som en användare ska man kunna svara på avancerade statistiska ekvationer
 ### 7. Som en användare ska man kunna få poäng beroende på om man kan svara på frågan
@@ -21,5 +21,5 @@
 ### 5. En fil ska ha mellanrum mellan operatorer
 ### 6. En fil ska ha blanka linjer logiskt placerat
 ### 7. All namngivning är i lowerCamelCase
-### 8. Endast jsdoc bör användas. Vid enskilda fall kan kommentarer vara okej
+### 8. Endast jsdoc kan användas. Vid enskilda fall kan kommentarer vara okej
 ### 9. Endast single quotes används
