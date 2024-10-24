@@ -2,15 +2,14 @@
 
 ## Functional Requirements
 
-### 1. Som en användare ska man kunna göra simpla statistiska ekvationer t.ex (sum, mean)
-### 2. Som en användare ska man kunna göra avancerade statistiska ekvationer t.ex (standard deviation, variation)
+### 1. Som en användare ska man kunna få simpla statistiska ekvations frågor t.ex (sum, mean)
+### 2. Som en användare ska man kunna få avancerade statistiska ekvations frågor t.ex (standard deviation, variation)
 ### 3. Som en användare ska man kunna få hjälp att räkna ut simpla statistiska ekvationer t.ex (sum, mean)
 ### 4. Som en användare ska man kunna få hjälp att räkna ut avancerade statistiska ekvationer t.ex (standard deviation, variation)
 ### 5. Som en användare ska man kunna svara på simpla statistiska ekvationer
 ### 6. Som en användare ska man kunna svara på avancerade statistiska ekvationer
-### 7. Som en användare ska man kunna få poäng beroende på om man kan svara på frågan
-### 8. Som en användare ska man kunna få hjälp att lösa en fråga
-### 9. Som en utvecklare ska det finnas minst 10 random generade arrayer
+### 7. Som en användare ska man kunna få poäng om man kan svara på frågan
+### 8. Som en utvecklare ska det finnas minst 10 random generade arrayer
 
 ## Non-Functional Requirements
 
