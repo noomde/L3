@@ -1,5 +1,5 @@
 import { Statistics } from '../../../module/src/Statistics.js'
-import { CalculationGuide } from '../../../Module/src/CalculationGuide.js'
+import { CalculationGuide } from '../../../module/src/CalculationGuide.js'
 import { numArrays } from '../staticData/dataArrays.js'
 
 const template = document.createElement('template')
